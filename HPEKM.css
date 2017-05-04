@@ -96,9 +96,10 @@ body {
 	background-color: #ffffff !important;
 	font-size: 100%;
 	display: block;
+	font-family: inherit;
 }
 main {
-	font-family:inherit;
+	font-family: "Metric", sans-serif;
 	font-size:inherit;
 	display:block;
 	margin:0 auto;
@@ -357,9 +358,44 @@ div.imagecenter {
 section:last-of-type {
 	margin-bottom: 30px;
 }
-.abstract {
-	font-weight:700;
+
+/* Index elements not wrapped, styling individual elements */
+/* Media queries and layout */
+@media all and (max-width:1020px) {
+    .masterbanner, .subtitle, .abstract, .desc, .pubsnumber, .publishedDate, .edition, .copyright, .toc {
+        width: 96% !important;
+        margin: 0 2% !important;
+    }
 }
-.edition,.abstract,.desc {
-	padding-bottom: 40px;
+.masterbanner, .subtitle, .toc, .abstract, .desc, .pubsnumber, .publishedDate, .edition, .copyright {
+	display:block;
+	margin:0 auto;
+	width: 1000px;	
+}
+.masterbanner::before {
+  background-image: url("https://www.hpe.com/etc/designs/hpeweb/logo.jpg");
+  background-size: 178px auto;
+  content: "";
+  display: block;
+  height: 120px;
+  left: -28px;
+  position: relative;
+  top: -23px;
+  width: 178px;
+  z-index: -1;
+}
+.masterbanner {
+  padding-bottom: 0.67em;
+}
+.subtitle {
+	
+}
+.abstract {
+  font-weight:700;
+}
+.desc {
+  padding-bottom: 0.67em;
+}
+.copyright {
+  padding-top: 0.67em;
 }
