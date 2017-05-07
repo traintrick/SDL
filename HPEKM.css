@@ -256,10 +256,10 @@ main ol {
     margin: 0 0 16px 34px;
     padding: 0;
 }
-main.ol[type="a"] {
+main.ol[type="a"], .li.substep {
     list-style-position: outside;
     list-style-type: lower-alpha;
-    margin: 0 0 0 34px !important;
+    margin: 0 0 0 0 !important;
     padding: 0;	
 }
 main li ul {
@@ -403,7 +403,7 @@ section:last-of-type {
   font-weight: 700;
   margin-top: 40px;
 }
-.toc ul {
+.toc ul, .topicref {
   list-style: outside none none;
 }
 .topicref a {
@@ -464,4 +464,11 @@ footer td.next {
 footer td.home {
   text-align: center;
   width: 20%;
+}
+header tr:hover, footer tr:hover {
+  background-color:#fff;
+}
+/* Troubleshooting topics */
+.troubleshootingdefaulttext {
+  font-weight: 700;
 }
