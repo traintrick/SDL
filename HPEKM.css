@@ -406,6 +406,9 @@ section:last-of-type {
 .toc ul, .topicref {
   list-style: outside none none;
 }
+ul.map, ul.bookmap {
+  padding-left: 0px;
+}
 .topicref a {
   color: #01a982;
   text-decoration: none;
