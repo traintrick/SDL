@@ -472,3 +472,12 @@ header tr:hover, footer tr:hover {
 .troubleshootingdefaulttext {
   font-weight: 700;
 }
+.troubleSolution section {
+  margin-left: 0.5em;
+}
+.condition p {
+  margin-left: 0.5em;
+}
+td ul {
+  margin: 0 0 0 30px !important;
+}
