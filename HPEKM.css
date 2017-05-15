@@ -66,7 +66,7 @@ table {
 
 th,td {
     text-align: left;
-    font-weight: 400;
+    font-weight: inherit;
 }
 
 /* Reset list styles */
@@ -97,6 +97,7 @@ body {
 	font-size: 100%;
 	display: block;
 	font-family: inherit;
+	color:#333;
 }
 main {
 	font-family: "Metric", sans-serif;
@@ -129,13 +130,20 @@ sup {
 	position:relative;
 	vertical-align:baseline;
 }
-
-/* Font scaling @typecast.com*/
+strong {
+	font-weight:600;
+}
+div[style] {
+  border-bottom: 0.25pt solid white !important;
+}
+/* Font scaling @grommet.github.io/hpe/docs/typography */
 main {
   font-size: 1em;
   /* equivalent to 16px */
   line-height: 1.25;
   /* equivalent to 20px */
+  color:#333;
+  font-weight:100;
 }
 @media (min-width: 43.75em) {
   main {
@@ -148,8 +156,9 @@ main {
 h1 {
   font-size: 2em;
   /* 2x body copy size = 32px */
-  line-height: 1.25;
+  line-height: 1.125;
   /* 45px / 36px */
+  margin: 0 0 12px 0;
 }
 @media (min-width: 43.75em) {
   h1 {
@@ -160,9 +169,9 @@ h1 {
 }
 @media (min-width: 56.25em) {
   h1 {
-    font-size: 2.815em;
+    font-size: 3em;
     /* 3x body copy size = 48px */
-    line-height: 1.05;
+    line-height: 1.125;
     /* keep to a multiple of the 20px line height 
     and something more appropriate for display headings */
   }
@@ -172,13 +181,14 @@ h2 {
   /* 1.625x body copy size = 26px */
   line-height: 1.15384615;
   /* 30px / 26px */
+  margin: 0 0 12px 0;
 }
 
 @media (min-width: 43.75em) {
   h2 {
     font-size: 1.8em;
     /* 2x body copy size = 32px */
-    line-height: 1.25;
+    line-height: 1.23;
   }
 }
 
@@ -186,7 +196,7 @@ h2 {
   h2 {
     font-size: 2.25em;
     /* 2.25x body copy size = 36px */
-    line-height: 1.25;
+    line-height: 1.23;
   }
 }
 h3 {
@@ -194,6 +204,7 @@ h3 {
   /* 1.375x body copy size = 22px */
   line-height: 1.13636364;
   /* 25px / 22px */
+  margin: 0 0 12px 0;
 }
 
 @media (min-width: 43.75em) {
@@ -246,9 +257,13 @@ main ul {
 main li {
     font-family: inherit;
     font-size: inherit;
+	font-weight: inherit;
     line-height: 22px !important;
     margin: 0 !important;
     text-align: left !important;
+}
+main li p {
+	margin:0px;
 }
 main ol {
     list-style-position: outside;
@@ -278,12 +293,15 @@ main li a[name] {
 main li .info p {
 	margin-top:0px;
 }
+main li table {
+	margin-top: 16px;
+}
 
 /* Tables */
 #tablecaption {
   font-size: 1.2em;
   font-weight: 700;
-  padding: 1em 0;
+  padding: 1em 0 0 0;
 }
 tr:hover {
     background-color: #eee;
@@ -301,9 +319,9 @@ thead tr th {
 	font-weight:700;
 }
 td.entry {
-	border-top: 2px solid #C6C9CA;
+	border-top: 1px solid #C6C9CA;
 	border-right:none;
-	border-bottom: 2px solid #C6C9CA;
+	border-bottom: 1px solid #C6C9CA;
 	border-left:none;
 }
 table,.table,.tablenoborder {
@@ -397,7 +415,7 @@ section:last-of-type {
   padding-top: 0.67em;
 }
 .toc::before {
-  color: black;
+  color: inherit;
   content: "Contents";
   font-size: 2.815em;
   font-weight: 700;
