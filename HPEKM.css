@@ -101,10 +101,42 @@ code, kbd, pre, samp, .pre, .codeblock, .codephrase {
 	white-space: pre-wrap;
 	
 }
-
+.prereq_statement {
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+article.nested0 .prereq_statement {
+  font-size: 2.25rem;
+  line-height: 1.23;
+}
+article.nested1 .prereq_statement {
+  font-size: 24px;
+  line-height: 1.333;
+}
+article.nested2 .prereq_statement {
+  font-size: 18px;
+  line-height: 1.333;
+}
+article.nested3 .prereq_statement {
+  font-size: 16px;
+  line-height: 1.333;
+}
+.title code, .sectiontitle code {
+  font-size:inherit;
+}
 .taskbody, .refbody, .conbody {
 	margin-bottom: 30px;
 }
+.taskbody section, .refbody section, .conbody section {
+	margin-bottom: 18px;
+}
+.taskbody section:last-of-type, .refbody section:last-of-type, .conbody section:last-of-type {
+	margin-bottom: 0px;
+}
+.p {
+  margin-top:0px;
+}
+
 .codeblock {
   display: block;
   border-radius: 7px;
@@ -135,51 +167,39 @@ main {
   font-size: 1em;
   /* equivalent to 16px */
   line-height: 1.125;
-  /* equivalent to 20px */
   color:#333;
   font-weight:400;
 }
 
 h1 {
   font-size: 3rem;
-  /* 2x body copy size = 32px */
   line-height: 1.125;
-  /* 45px / 36px */
   margin: 0 0 12px 0;
 }
 
 h2 {
   font-size: 2.25rem;
-  /* 1.625x body copy size = 26px */
   line-height: 1.23;
-  /* 30px / 26px */
   margin: 0 0 12px 0;
 }
 
 h3 {
   font-size: 24px;
-  /* 1.375x body copy size = 22px */
   line-height: 1.333;
-  /* 25px / 22px */
   margin: 0 0 12px 0;
 }
 
 h4 {
   font-size: 18px;
-  /* 1.375x body copy size = 22px */
   line-height: 1.333;
-  /* 25px / 22px */
   margin: 0 0 12px 0;
 }
 
 h5,h6 {
   font-size: 16px;
-  /* 1.375x body copy size = 22px */
   line-height: 1.375;
-  /* 25px / 22px */
   margin: 0 0 12px 0;
 }
-
 
 /* Links */
 main a[target="_blank"]:link,main a[target="_blank"]:hover,main a[target="_blank"]:active,main a[target="_blank"]:visited {
@@ -226,6 +246,7 @@ a[href^="MAILTO"] {
   font-weight: 700;
   text-decoration: underline !important;
 }
+
 /* Lists */
 main ul {
 	list-style-type: Disc !important;
@@ -293,10 +314,8 @@ main li table {
 dl {
 	margin: 0 0 12px 0;
 }
-
-.troubleSolution span.troubleshootingdefaulttext {
-  display: inline-block;
-  margin-bottom: 12px;
+li p p, li p:last-of-type, .stepresult p {
+	margin-bottom:12px;
 }
 
 /* Checklist */
@@ -313,25 +332,7 @@ main ul.checklist li::before {
   margin: 5px;
   padding: 5px;
 }
-.prereq_statement {
-  font-weight: 700;
-  margin: 0 0 12px 0;
-}
-article.nested0 .prereq_statement {
-  font-size: 2.25rem;
-}
-article.nested1 .prereq_statement {
-  font-size: 24px;
-}
-article.nested2 .prereq_statement {
-  font-size: 18px;
-}
-article.nested3 .prereq_statement {
-  font-size: 16px;
-}
-.title code, .sectiontitle code {
-  font-size:inherit;
-}
+
 
 /* Tables */
 #tablecaption {
@@ -543,7 +544,10 @@ header tr:hover, footer tr:hover {
 div[style^="width:100%"] {
   margin: 0 !important;
 }
-
+.troubleSolution span.troubleshootingdefaulttext {
+  display: inline-block;
+  margin-bottom: 12px;
+}
 .related-links {
     margin-bottom: 4px;
 }
