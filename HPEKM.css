@@ -94,11 +94,16 @@ main {
 }
 code, kbd, pre, samp, .pre, .codeblock, .codephrase {
 	font-family:"Courier New", monospace !important;
-    font-size: 13px;
+    font-size: 16px;
 	color: inherit;
     background-color: inherit;
     vertical-align: baseline;
 	white-space: pre-wrap;
+	
+}
+
+.taskbody, .refbody, .conbody {
+	margin-bottom: 30px;
 }
 .codeblock {
   display: block;
@@ -132,7 +137,7 @@ main {
   line-height: 1.125;
   /* equivalent to 20px */
   color:#333;
-  font-weight:100;
+  font-weight:400;
 }
 
 h1 {
@@ -174,10 +179,7 @@ h5,h6 {
   /* 25px / 22px */
   margin: 0 0 12px 0;
 }
-.prereq_statement {
-  font-weight: 700;
-  margin: 0 0 12px 0;
-}
+
 
 /* Links */
 main a[target="_blank"]:link,main a[target="_blank"]:hover,main a[target="_blank"]:active,main a[target="_blank"]:visited {
@@ -229,7 +231,7 @@ main ul {
 	list-style-type: Disc !important;
     list-style-image: none !important;
     list-style-position: outside !important;
-    margin: 0 0 1em 16px !important;
+    margin: 0 0 0 21px !important;
 	padding: 0 !important;
 }
 main li {
@@ -310,6 +312,25 @@ main ul.checklist li::before {
   float: left;
   margin: 5px;
   padding: 5px;
+}
+.prereq_statement {
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+article.nested0 .prereq_statement {
+  font-size: 2.25rem;
+}
+article.nested1 .prereq_statement {
+  font-size: 24px;
+}
+article.nested2 .prereq_statement {
+  font-size: 18px;
+}
+article.nested3 .prereq_statement {
+  font-size: 16px;
+}
+.title code, .sectiontitle code {
+  font-size:inherit;
 }
 
 /* Tables */
@@ -400,9 +421,6 @@ div.imageleft {
 }
 div.imagecenter {
 	text-align:center;
-}
-section:last-of-type {
-	margin-bottom: 30px;
 }
 
 /* Media queries and layout */
