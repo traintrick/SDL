@@ -33,54 +33,76 @@ Vibrants
 #FF8D6D - HPE Orange
 #614767 - HPE Purple
 */
+/*
+Call fonts // To use metric font, uncomment the section below // source@grommet.github.io/hpe/docs/typography*/
+/*
+@font-face {
+    font-family: "Metric";
+    src: url(https://hpefonts.s3.amazonaws.com/MetricWeb-Regular.woff) format("woff");
+}
 
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@font-face {
+    font-family: "Metric";
+    font-weight: 700;
+    src: url(https://hpefonts.s3.amazonaws.com/MetricWeb-Bold.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Metric";
+    font-weight: 600;
+    src: url(https://hpefonts.s3.amazonaws.com/MetricWeb-Semibold.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Metric";
+    font-weight: 100;
+    src: url(https://hpefonts.s3.amazonaws.com/MetricWeb-Light.woff) format("woff");
+}
+*/
+
+/* Start browser resets and cleanup */
+  /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-block}progress,sub,sup{vertical-align:baseline}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0} menu,article,aside,details,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{}button,select{text-transform:none}[type=submit], [type=reset],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
 
-/* Reset tables */
-table {
+  /* Resets tables */
+table { 
     border-collapse: collapse;
     border-spacing: 0;
 }
-
-th,td {
+  /* Resets table rows */
+th,td { 
     text-align: left;
     font-weight: inherit;
 }
-
-/* Reset list styles */
-main ol,main ul {
+  /* Resets lists */
+main ol,main ul { 
     list-style: none;
 }
-/* Prevent font scaling in landscape */
-html {
+  /* Prevents font scaling in landscape */
+html { 
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
     -ms-text-size-adjust: none;
 }
-/* Hide hr artefacts */
+  /* Always show scrollbar */
+html, body { 
+	height: 101%;
+}
+  /* Cleanup junk created by SDL */
 hr {
 	display:none;
 }
-html:lang(en-us) {
-	font-family: "Metric", Arial, sans-serif;
+div[style] {
+  border-bottom: 0.25pt solid white !important;
 }
+/* End of resets and cleanup */
 
-/* Always show scrollbar */
-html, body {
-	height: 101%;
-}
-/* Body stuff */
+/* Start body layout and media queries */
 body {
 	background-color: #ffffff !important;
-	font-size: 100%;
 	display: block;
-	font-family: inherit;
-	color:#333;
 }
 main {
-	font-family: "Metric", Arial, sans-serif;
-	font-size:inherit;
 	display:block;
 	margin:0 auto;
 	width: 1000px;
@@ -92,19 +114,52 @@ main {
         margin: 0 2% !important;
     }
 }
-code, kbd, pre, samp, .pre, .codeblock, .codephrase {
-	font-family:"Courier New", monospace !important;
-    font-size: 16px;
-	color: inherit;
-    background-color: inherit;
-    vertical-align: baseline;
-	white-space: pre-wrap;
-	
+/* End body layout */
+
+/* Start fonts */
+html:lang(en-us) {
+	font-family: "Metric", Arial, sans-serif;
 }
-.prereq_statement {
-  font-weight: 700;
-  margin: 0 0 12px 0;
+body {
+	font-family: inherit;
+	font-size: 100%;
+	color:#333;
 }
+main {
+	font-family: "Metric", Arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.125;
+	color:#333;
+	font-weight:400;
+}
+h1 {
+  font-size: 2rem;
+  line-height: 1.125;
+}
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.23;
+}
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.333;
+}
+h4 {
+  font-size: 1rem;
+  line-height: 1.333;
+}
+h5,h6 {
+  font-size: 16px;
+  line-height: 1.375;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 .5rem 0;	
+}
+p {
+  margin-top:0px;
+  margin-bottom:12px;
+}
+  /* Nested topic heading sizes */
 article.nested0 .prereq_statement {
   font-size: 1.5rem;
   line-height: 1.23;
@@ -121,88 +176,87 @@ article.nested3 .prereq_statement {
   font-size: 16px;
   line-height: 1.333;
 }
-.title code, .sectiontitle code {
-  font-size:inherit;
-}
-.taskbody, .refbody, .conbody, .troublebody, .troubleSolution {
-	margin-bottom: 30px;
-}
-.taskbody section, .refbody section, .conbody section {
-	margin-bottom: 18px;
-}
-.taskbody section:last-of-type, .refbody section:last-of-type, .conbody section:last-of-type {
-	margin-bottom: 0px;
-}
-.p {
-  margin-top:0px;
-}
-
-.codeblock {
-  display: block;
-  border-radius: 7px;
-  padding: 12px;
-}
-kbd.userinput {
-	font-weight:900;
-}
-.uicontrol, .dt, .menucascade {
-  font-weight: 600;
-}
 sup {
     font-size: 15px;
-	top: -0.4em;
 	line-height: 0;
 	position:relative;
+	top: -0.4em;
 	vertical-align:baseline;
 	margin-left:3px;
 }
 strong {
 	font-weight:600;
 }
-div[style] {
-  border-bottom: 0.25pt solid white !important;
+.related_links_header {
+    font-weight: bold;
 }
-/* Font scaling @grommet.github.io/hpe/docs/typography */
-main {
-  font-size: 1em;
-  /* equivalent to 16px */
-  line-height: 1.125;
-  color:#333;
-  font-weight:400;
+/* Start preformatted font */
+code, kbd, pre, samp, .pre, .codeblock, .codephrase {
+	font-family: "Courier New", monospace !important;
+	font-size: 15px;
+	color: black;
+	-moz-tab-size: 4;
+	hyphens: none;
+	line-height: 1.5;
+	overflow-wrap: normal;
+	text-align: left;
+	text-shadow: 0 1px white;
+	white-space:wrap;
+	overflow:auto;
+	word-break: normal;
+	word-spacing: normal;
+    vertical-align: baseline;
 }
-
-h1 {
-  font-size: 2rem;
-  line-height: 1.125;
+/* Future work for styling an actual keycap action
+kbd kbd {
+  font-size:14px;
+  background-color: #eff0f1;
+  border: 1px solid #adb3b9;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(12, 13, 14, 0.2), 0 0 0 2px #fff inset;
+  color: #242729;
+  display: inline-block;
+  line-height: 1.4;
+  padding: 0.1em 0.6em;
+  text-shadow: 0 1px 0 #fff;
+  white-space: nowrap;
+}
+*/
+pre, code, samp, kbd {
+	background:#eff0f1 none repeat scroll 0 0;
+	border-radius:4px;
+}
+kbd.userinput {
+	font-weight:inherit;
+}
+.uicontrol, .dt, .menucascade {
+  font-weight: 600;
+}
+.prereq_statement {
+  font-weight: 700;
   margin: 0 0 12px 0;
 }
-
-h2 {
-  font-size: 1.5rem;
-  line-height: 1.23;
-  margin: 0 0 12px 0;
+code, .codeblock, pre, samp, kbd {
+	padding: 0 4px;
 }
-
-h3 {
-  font-size: 1.25rem;
-  line-height: 1.333;
-  margin: 0 0 12px 0;
+pre samp {
+	padding: 0;
 }
-
-h4 {
-  font-size: 1rem;
-  line-height: 1.333;
-  margin: 0 0 12px 0;
+  /* Removes padding within codeblocks */
+.codeblock code, pre kbd { 
+  padding: 0;
 }
-
-h5,h6 {
-  font-size: 16px;
-  line-height: 1.375;
-  margin: 0 0 12px 0;
+  /* Titles containing code element */
+.title code, .sectiontitle code {
+  font-size:inherit;
 }
+/* End of fonts */
 
-/* Links */
-main a[target="_blank"]:link,main a[target="_blank"]:hover,main a[target="_blank"]:active,main a[target="_blank"]:visited {
+/* Start anchors and links */
+main a[target="_blank"]:link,
+main a[target="_blank"]:hover,
+main a[target="_blank"]:active,
+main a[target="_blank"]:visited {
 	color: #000 !important;
 	font-size: 1em;
     line-height: 22px;
@@ -214,8 +268,8 @@ main a.xref:visited,
 main a.link:link,
 main a.link:visited,
 main a sup {
-    color: #01B187;
-    text-decoration: none;
+    color: #333;
+    text-decoration: underline;
 }
 main a.xref:hover,
 main a.link:hover {
@@ -225,7 +279,12 @@ main a.xref:active,
 main a.link:active {
     text-decoration: none;
 }
-.fn a,a.fn:link,a.fn:hover,a.fn:active,a.fn:visited, #endnotes a {
+.fn a,
+a.fn:link,
+a.fn:hover,
+a.fn:active,
+a.fn:visited,
+#endnotes a {
 	text-decoration:none;
 }
 a.fn {
@@ -246,8 +305,9 @@ a[href^="MAILTO"] {
   font-weight: 700;
   text-decoration: underline !important;
 }
+/* End of anchors and links */
 
-/* Lists */
+/* Start lists and footnotes */
 main ul {
 	list-style-type: Disc !important;
     list-style-image: none !important;
@@ -260,16 +320,16 @@ main li {
     font-size: inherit;
 	font-weight: inherit;
     line-height: 22px !important;
-    margin: 0 !important;
+    margin: 0 0 12px 0 !important;
     text-align: left !important;
 }
 main li p {
-	margin:0px;
+	margin:0 0 12px 0;
 }
 main ol {
     list-style-position: outside;
     list-style-type: decimal;
-    margin: 0 0 12px 16px;
+    margin: 0 0 0 16px;
     padding: 0;
 }
 main.ol[type="a"], .li.substep {
@@ -293,19 +353,12 @@ main li ul li ul {
 main li a[name] {
 	display:none;
 }
-@media screen\0 {
-    main li a[name] {
-        display:inline;
-    }
-    main li p.p:first-of-type {
-        display:inline;
-    }
-}
 main li a.xref,
 main li a.link {
 	display:inline;
 }
-main li .info p, .relinfo {
+main li .info p,
+.relinfo {
 	margin: 0 0 12px 0;
 }
 main li table {
@@ -314,11 +367,15 @@ main li table {
 dl {
 	margin: 0 0 12px 0;
 }
-li p p, li p:last-of-type, .stepresult p {
+main li p p, li p,
+.stepresult p {
 	margin-bottom:12px;
 }
+main .step span.cmd:only-of-type {
+  display: block;
+  margin-bottom: 12px;
+}
 
-/* Checklist */
 main ul.checklist {
   list-style-type: none !important;
   margin: 0 0 0 14px !important;
@@ -338,8 +395,9 @@ main ul.checklist li::before {
 .fn {
   margin-bottom: 12px;
 }
+/* End lists and footnotes */
 
-/* Tables */
+/* Start tables */
 #tablecaption {
   font-size: 1.2em;
   font-weight: 700;
@@ -366,17 +424,20 @@ td.entry {
 	border-bottom: 1px solid #C6C9CA;
 	border-left:none;
 }
-table,.table,.tablenoborder {
+table,
+.table,
+.tablenoborder {
     border:0!important;
 	max-width: 100% !important;
     width: auto;
 	padding-bottom:2em;
 }
+/* End tables */
 
-/* Alerts and notes */
+/* Start alerts and notes */
 .note {
 	width: 600px;
-	margin:0.8em 10px;
+	margin:0 10px 12px 10px;
 	padding: 5px 0;
 	border-top: 2px solid #01A982;
 	border-bottom: 2px solid #01A982;
@@ -401,14 +462,13 @@ table[frame="hsides"] td {
         width: 96% !important;
     }
 }
-
-/* Images and media */
-span.figcap {
-  font-size: 1.2em;
-  font-weight: 700;
-  padding: 1em 0 0 0;
-  display:block;
+/* removes margin from top if preceding paragraph is last-of-type */
+main li .note:last-of-type { 
+  margin-top: 0;
 }
+/* End alerts and notes */
+
+/* Start images and media */
 
 img,video {
     max-width: 100% !important;
@@ -428,8 +488,19 @@ div.imageleft {
 div.imagecenter {
 	text-align:center;
 }
+span.figcap {
+  font-size: 1.2em;
+  font-weight: 700;
+  padding: 1em 0 0 0;
+  display:block;
+}
+.icon {
+	height:auto;
+	vertical-align:middle;
+	width:23px;
+}
 
-/* Media queries and layout */
+/* Start front matter classes */
 @media all and (max-width:1020px) {
     .masterbanner, .subtitle, .abstract, .desc, .pubsnumber, .publishedDate, .edition, .copyright, .toc {
         width: 96% !important;
@@ -441,7 +512,8 @@ div.imagecenter {
 	margin:0 auto;
 	width: 1000px;
 }
-/*.masterbanner::before {
+/*
+.masterbanner::before {
   background-image: url("https://www.hpe.com/etc/designs/hpeweb/logo.jpg");
   background-size: 178px auto;
   content: "";
@@ -452,7 +524,8 @@ div.imagecenter {
   top: -23px;
   width: 178px;
   z-index: -1;
-}*/
+}
+*/
 .masterbanner {
   padding-bottom: 0.67em;
 }
@@ -490,7 +563,9 @@ ul.map, ul.bookmap {
 .copyright {
   padding-top: 0.67em;
 }
-/* Navigation arrows */
+/* End front matter classes */
+
+/* Start navigation arrows */
 header {
   width:1000px;
   margin: 0 auto;
@@ -536,7 +611,9 @@ footer td.home {
 header tr:hover, footer tr:hover {
   background-color:#fff;
 }
-/* Troubleshooting topics */
+/* End navigation arrows */
+
+/* Start troubleshooting topics */
 .troubleshootingdefaulttext {
   display:inline-block;
   font-weight: 700;
@@ -555,11 +632,20 @@ div[style^="width:100%"] {
   display: inline-block;
   margin-bottom: 12px;
 }
+/* End troubleshooting topics */
+
 .related-links {
     margin-bottom: 4px;
 }
-
 .related_links_header {
-    font-weight: bold;
     margin-bottom: 4px;
+}
+.taskbody, .refbody, .conbody, .troublebody, .troubleSolution {
+	margin-bottom: 30px;
+}
+.taskbody section, .refbody section, .conbody section {
+	margin-bottom: 18px;
+}
+.taskbody section:last-of-type, .refbody section:last-of-type, .conbody section:last-of-type {
+	margin-bottom: 0px;
 }
