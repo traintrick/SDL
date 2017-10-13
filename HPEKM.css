@@ -31,11 +31,10 @@ Neutrals
 Vibrants
 #2AD2C9 - HPE Turquouise
 #FF8D6D - HPE Orange
-#614767 - HPE Purple
-*/
+#614767 - HPE Purple*/
 /*
 Call fonts // To use metric font, uncomment the section below // source@grommet.github.io/hpe/docs/typography*/
-/*
+
 @font-face {
     font-family: "Metric";
     src: url(https://hpefonts.s3.amazonaws.com/MetricWeb-Regular.woff) format("woff");
@@ -58,7 +57,7 @@ Call fonts // To use metric font, uncomment the section below // source@grommet.
     font-weight: 100;
     src: url(https://hpefonts.s3.amazonaws.com/MetricWeb-Light.woff) format("woff");
 }
-*/
+
 
 /* Start browser resets and cleanup */
   /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -410,19 +409,24 @@ td p {
 	margin: 3px 0;
 }
 th.entry {
-	border-top: 3px solid #01A982;
+	border-top: 3px solid #01A982 !important;
 	border-right: none;
-	border-bottom: none;
+	border-bottom: 1px solid #ccc !important;
 	border-left: none;
+	background-color: transparent !important;
+	color: black !important;
 }
+
 thead tr th {
 	font-weight:700;
 }
 td.entry {
-	border-top: 1px solid #C6C9CA;
+	border-top: 1px solid #C6C9CA !important;
 	border-right:none;
-	border-bottom: 1px solid #C6C9CA;
+	border-bottom: 1px solid #C6C9CA !important;
 	border-left:none;
+	line-height:inherit;
+	padding: 4px !important;
 }
 table,
 .table,
@@ -532,6 +536,24 @@ span.figcap {
 .toc {
   padding-top: 0.67em;
 }
+/* Revision page */
+.bookHead {
+	margin-bottom: 65px;
+}
+.bookHead .masterbanner {
+	text-align: center;
+	padding-top: 40px;
+	margin-top: 44px;
+}
+.logo {
+	position:absolute;
+}
+.bookHead tr {
+	background-color: white !important;
+	color: black !important;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
 /*
 .toc::before {
   color: inherit;
@@ -611,6 +633,9 @@ footer td.home {
 header tr:hover, footer tr:hover {
   background-color:#fff;
 }
+footer[role="contentinfo"] {
+	display: none;
+}
 /* End navigation arrows */
 
 /* Start troubleshooting topics */
@@ -633,7 +658,12 @@ div[style^="width:100%"] {
   margin-bottom: 12px;
 }
 /* End troubleshooting topics */
-
+nav.related-links {
+    display: none;
+}
+nav.wh_footer {
+	display: none;
+}
 .related-links {
     margin-bottom: 4px;
 }
