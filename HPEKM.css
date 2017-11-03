@@ -257,16 +257,22 @@ body {
 	background-color: #ffffff !important;
 	display: block;
 }
+body.frmBody {
+	overflow: scroll;
+}
 main {
 	display: block;
 	margin: 0 auto;
 	width: 1000px;
 	padding: 1em 0;
 }
-@media all and (max-width:1020px) {
+@media screen and (max-width:1020px) {
 	main, header, footer {
 		width: 96% !important;
-		margin: 0 2% !important;
+		margin: 0 2%;
+	}
+	header[role="banner"] {
+		margin: 0;
 	}
 }
 
@@ -616,10 +622,19 @@ table, .table, .tablenoborder {
 
 /* Start alerts and notes */
 
+.importanttitle, div[class="important"] > h3, .attentiontitle, div[class="attention"] > h3, .noticetitle, div[class="notice"] > h3 {
+	margin-top: 5px;
+	margin-left: 20px;
+}
+.cautiontitle,
+div[class = "caution"] > h3 {
+	margin-top: 5px;
+	margin-left:20px;
+}
 .note {
 	width: 600px;
 	margin: 0 10px 12px 10px;
-	padding: 5px 0;
+	padding: 5px 0 5px 44px;
 	border-top: 2px solid #01A982;
 	border-bottom: 2px solid #01A982;
 }
@@ -688,13 +703,13 @@ span.figcap {
 /* Start front matter classes */
 
 
-.masterbanner, .subtitle, .toc, .abstract, .desc, .pubsnumber, .publishedDate, .edition, .copyright {
+h1.masterbanner, .subtitle, .toc, .abstract, .desc, .pubsnumber, .publishedDate, .edition, .copyright {
 	display: block;
 	margin: 0 auto;
 	width: 1000px;
 }
 @media screen and (min-width:321px) and (max-width:1020px) {
-	.masterbanner, .subtitle, .abstract, .desc, .pubsnumber, .publishedDate, .bookpartno, .edition, .copyright, .toc {
+	h1.masterbanner, .subtitle, .abstract, .desc, .pubsnumber, .publishedDate, .bookpartno, .edition, .copyright, .toc {
 		width: 96%;
 		margin: 0 2%;
 	}
@@ -705,11 +720,14 @@ span.figcap {
 		margin: 0;
 	}
 }
-@media screen and (min-width:321px) and (max-width:1020px) {
+@media screen and (min-width:100px) and (max-width:1020px) {
 	.bookHead .masterbanner {
 		font-size: 1.2rem;
 		text-align:left !important;
 		padding-bottom: 0;
+	}
+	.logo {
+		width:140px;
 	}
 }
 /*
@@ -740,6 +758,7 @@ span.masterbanner {
 
 .bookHead {
 	margin-bottom: 65px;
+	width: 100%;
 }
 .bookHead .masterbanner {
 	text-align: center;
@@ -781,7 +800,8 @@ ul.map, ul.bookmap {
 .desc {
 	padding-bottom: 0.67em;
 }
-.bookpage .body .edition {
+.bookpage {
+	margin:0 !important;
 }
 /* End front matter classes */
 
@@ -790,7 +810,9 @@ ul.map, ul.bookmap {
 
 header {
 	width: 1000px;
-	margin: 0 auto;
+}
+.banner {
+	margin: 0 !important;
 }
 table.header {
 	margin-top: 20px;
