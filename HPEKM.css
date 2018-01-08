@@ -33,33 +33,6 @@ Vibrants
 #FF8D6D - HPE Orange
 #614767 - HPE Purple*/
 
-
-/*
-Call fonts // To use metric font, uncomment the section below // source@grommet.github.io/hpe/docs/typography*/
-
-@font-face {
-	font-family: "Metric";
-	src: url(https://hpefonts.s3.amazonaws.com/MetricWeb-Regular.woff) format("woff");
-}
-@font-face {
-	font-family: "Metric";
-	font-weight: 700;
-	src: url(https://hpefonts.s3.amazonaws.com/MetricWeb-Bold.woff) format("woff");
-}
-@font-face {
-	font-family: "Metric";
-	font-weight: 600;
-	src: url(https://hpefonts.s3.amazonaws.com/MetricWeb-Semibold.woff) format("woff");
-}
-@font-face {
-	font-family: "Metric";
-	font-weight: 100;
-	src: url(https://hpefonts.s3.amazonaws.com/MetricWeb-Light.woff) format("woff");
-}
-
-/* Start browser resets and cleanup */
-
-
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 button, hr, input {
@@ -259,6 +232,7 @@ body {
 }
 body.frmBody {
 	overflow: scroll;
+	padding-left: 0px !important;
 }
 main {
 	display: block;
@@ -267,12 +241,13 @@ main {
 	padding: 1em 0;
 }
 @media screen and (max-width:1020px) {
-	main, header, footer {
+	main, footer {
 		width: 96% !important;
 		margin: 0 2%;
 	}
 	header[role="banner"] {
 		margin: 0;
+		width:98%;
 	}
 }
 
@@ -284,9 +259,31 @@ main {
 html:lang(en-us) {
 	font-family: "Metric", Arial, sans-serif;
 }
+html:lang(zh-cn){
+font-family: Arial, "SimHei", "Arial Unicode MS", sans-serif;
+}
+html:lang(ja-jp) {
+font-family: Arial, "MS Gothic", "Arial Unicode MS", sans-serif;
+}
+html:lang(ja){
+font-family: Arial, "MS Gothic", "Arial Unicode MS", sans-serif;
+}
+html:lang(zh-tw){
+font-family: Arial, "Microsoft JhengHei", "Arial Unicode MS", sans-serif;
+}
+html:lang(ko-kr) {
+font-family: Arial, Dotum, "Arial Unicode MS", sans-serif;
+}
+html:lang(th-th) {
+font-family: Arial, "AngsanaUPC", "Arial Unicode MS", sans-serif;
+}
+html:lang(de-de), html:lang(fr-fr), html:lang(es-es), html:lang(kk-kz), html:lang(ru-ru), html:lang(uk-ua), html:lang(ar-sa), html:lang(el-gr), html:lang(he-il), html:lang(th-th) {
+font-family: Arial, "Arial Unicode MS", sans-serif;
+}
+
 body {
 	font-family: inherit;
-	font-size: 100%;
+	font-size: 16px;
 	color: #333;
 }
 main {
@@ -297,35 +294,40 @@ main {
 	font-weight: 400;
 }
 h1 {
-	font-size: 2rem;
-	line-height: 1.125;
-}
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 30px 0px 20px 0px;
+  line-height: 30px; }
 h2 {
-	font-size: 1.5rem;
-	line-height: 1.23;
-}
+  font-size: 21px;
+  font-weight: 600;
+  color: #333;
+  margin: 20px 0px 10px 0px; }
 h3 {
-	font-size: 1.25rem;
-	line-height: 1.333;
-}
+  font-size: 19px;
+  color: #333;
+  margin: 10px 0px; }
 h4 {
-	font-size: 1rem;
-	line-height: 1.333;
-}
+  font-size: 18px;
+  color: #333;
+  font-weight: normal;
+  margin: 5px 0px;
+  line-height: 22px; }
 h5, h6 {
-	font-size: 16px;
-	line-height: 1.375;
-}
-h1, h2, h3, h4, h5, h6 {
-	margin: 0 0 .5rem 0;
-}
+  font-size: 16px;
+  color: #333;
+  font-weight: normal;
+  margin: 5px 0px; }
+
 p {
-	margin-top: 0px;
+	margin-top: 0px !important;
 	margin-bottom: 12px;
 }
 
 /* Nested topic heading sizes */
 
+/* We now want these headings to be the same size everywhere 
 article.nested0 .prereq_statement {
 	font-size: 1.5rem;
 	line-height: 1.23;
@@ -359,14 +361,17 @@ article.nested3 .procedure_statement {
 	font-size: 16px;
 	line-height: 1.333;
 }
+*/
 
 sup {
-	font-size: 15px;
-	line-height: 0;
-	position: relative;
-	top: -0.4em;
-	vertical-align: baseline;
-	margin-left: 3px;
+	position:relative;
+	top: -.15em;
+	vertical-align: top;
+}
+
+table .fn sup {
+	top: 2px;
+	padding-left: 4px;
 }
 strong {
 	font-weight: 600;
@@ -379,21 +384,31 @@ strong {
 
 code, kbd, pre, samp, .pre, .codeblock, .codephrase {
 	font-family: "Courier New", monospace !important;
-	font-size: 15px;
-	color: black;
-	-moz-tab-size: 4;
-	hyphens: none;
-	line-height: 1.5;
-	overflow-wrap: normal;
-	text-align: left;
-	text-shadow: 0 1px white;
-	white-space: wrap;
-	overflow: auto;
-	word-break: normal;
-	word-spacing: normal;
-	vertical-align: baseline;
+	font-size: 14px !important;
+	color: black !important;
+	-moz-tab-size: 4 !important;
+	hyphens: none !important;
+	line-height: 1.5 !important;
+	overflow-wrap: normal !important;
+	text-align: left !important;
+	text-shadow: 0 1px white !important;
+	white-space: pre !important;
+	overflow: auto !important;
+	word-break: normal !important;
+	word-spacing: normal !important;
+	vertical-align: baseline !important;
+	border: none  !important;
+	box-shadow: none !important;
 }
+/* Overwrite skin.css*/
+pre.screen {
+	background-color: #eff0f1 !important;
+	color: #333333;
+	font-size: 1.1em;
+	font-family: "Courier New", Courier, monospace !important;
+	border: none !important;
 
+}
 /* Future work for styling an actual keycap action
 kbd kbd {
   font-size:14px;
@@ -411,16 +426,16 @@ kbd kbd {
 */
 
 pre, code, samp, kbd {
-	background: #eff0f1 none repeat scroll 0 0;
-	border-radius: 4px;
+	background: #eff0f1 none repeat scroll 0 0 !important;
+	border-radius: 4px !important;
 }
 kbd.userinput {
-	font-weight: inherit;
+	font-weight: inherit !important;
 }
 .uicontrol, .dt, .menucascade {
 	font-weight: 600;
 }
-.prereq_statement {
+.prereq_statement, .procedure_statement {
 	font-weight: 700;
 	margin: 0 0 12px 0;
 }
@@ -504,8 +519,12 @@ main li {
 	font-size: inherit;
 	font-weight: inherit;
 	line-height: 22px !important;
-	margin: 0 0 12px 0 !important;
+	margin: 0 0 0 0 !important;
 	text-align: left !important;
+	padding-left: 5px;
+}
+main li:last-of-type {
+	margin-bottom: 12px;
 }
 main li p {
 	margin: 0 0 12px 0;
@@ -513,17 +532,17 @@ main li p {
 main ol {
 	list-style-position: outside;
 	list-style-type: decimal;
-	margin: 0 0 0 16px;
+	margin: 0 0 12px 21px;
 	padding: 0;
 }
 main.ol[type="a"], .li.substep {
 	list-style-position: outside;
 	list-style-type: lower-alpha;
 	margin: 0 0 0 0 !important;
-	padding: 0;
+	padding-left: 5px;
 }
 main ol li ol {
-	margin: 0 0 12px 18px;
+	margin: 0 0 12px 15px;
 	list-style-type: lower-alpha;
 }
 main li ul {
@@ -568,11 +587,14 @@ main ul.checklist li::before {
 	margin: 5px;
 	padding: 5px;
 }
-.fn .p {
-	margin: 0 0 0 15px;
+.ulchildlink br {
+	display:none;
 }
-.fn {
-	margin-bottom: 12px;
+.fn .p {
+	margin: 0 0 0 11px;
+}
+.fn_table sup {
+	top:5px;
 }
 
 /* End lists and footnotes */
@@ -585,7 +607,7 @@ main ul.checklist li::before {
 	font-weight: 700;
 	padding: 1em 0 0 0;
 }
-tr:hover {
+.table tr:hover {
 	background-color: #eee;
 }
 td p {
@@ -610,26 +632,70 @@ td.entry {
 	line-height: inherit;
 	padding: 4px !important;
 }
-table, .table, .tablenoborder {
-	border: 0!important;
+table, .table, .tablenoborder, .tableborder {
+	border: 1px solid transparent !important;
 	max-width: 100% !important;
 	width: auto;
-	padding-bottom: 2em;
+	margin-bottom: 2em;
 }
-
+.navfooter table {
+	margin-bottom: 0px;
+}
 /* End tables */
 
 
 /* Start alerts and notes */
+.cautiontitle,
+div[class = "caution"] > h3{
+    background-image: url("./oxygen-webhelp/resources/img/caution.png") !important;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 16px;
+    height: 16px;
+    float: left;
+	margin-top: 9px;
+	margin-left:24px;
+}
 
 .importanttitle, div[class="important"] > h3, .attentiontitle, div[class="attention"] > h3, .noticetitle, div[class="notice"] > h3 {
+	background-image: url("./oxygen-webhelp/resources/img/important.png") !important;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 20px;
+	height: 20px;
+	float: left;
 	margin-top: 5px;
 	margin-left: 20px;
 }
-.cautiontitle,
-div[class = "caution"] > h3 {
+.tiptitle, div[class="tip"] > h3 {
+	background-image: url("./oxygen-webhelp/resources/img/tip.png") !important;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 25px;
+	height: 25px;
+	float: left;
+	margin-top:7px;
+	margin-left: 19px;
+}
+.notetitle, div[class="note"] > h3 {
+	background-image: url("./oxygen-webhelp/resources/img/note.png") !important;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-top:6px;
+	margin-left:25px;
+}
+.tiptitle, div[class="tip"] > h3 {
+	background-image: url("./oxygen-webhelp/resources/img/tip.png") !important;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-left: 20px;
 	margin-top: 5px;
-	margin-left:20px;
 }
 .note {
 	width: 600px;
@@ -649,13 +715,16 @@ table[frame="hsides"] {
 	margin: 0.8em 10px;
 	padding: 5px 0;
 }
+table tr {
+	transition: background-color 0.2s;
+}
 table[frame="hsides"] td {
 	border-top: 2px solid #01A982 !important;
 	border-bottom: 2px solid #01A982 !important;
 }
 @media all and (max-width:670px) {
 	.note, table[frame="hsides"] {
-		width: 96% !important;
+		width: 88% !important;
 	}
 }
 
@@ -676,7 +745,7 @@ img, video {
 }
 @media all and (max-width:675px) {
 	figure {
-		margin: 0;
+		margin: 1em 40px;
 	}
 }
 div.imageright {
@@ -708,16 +777,25 @@ h1.masterbanner, .subtitle, .toc, .abstract, .desc, .pubsnumber, .publishedDate,
 	margin: 0 auto;
 	width: 1000px;
 }
+.copyright {
+	margin: 20px auto;
+}
 @media screen and (min-width:321px) and (max-width:1020px) {
-	h1.masterbanner, .subtitle, .abstract, .desc, .pubsnumber, .publishedDate, .bookpartno, .edition, .copyright, .toc {
+	h1.masterbanner, .subtitle, .abstract, .desc, .pubsnumber, .publishedDate, .bookpartno, .edition, .toc {
 		width: 96%;
 		margin: 0 2%;
 	}
+	.bookpage .body .copyright {
+		margin: 20px auto;
+	}
 }
 @media screen and (min-width:321px) and (max-width:1020px) {
-	.bookpage .body .edition, .bookpage .body .bookpartno, .bookpage .body .publishedDate, .bookpage .body .copyright {
+	.bookpage .body .edition, .bookpage .body .bookpartno, .bookpage .body .publishedDate, .bookpage .body {
 		width: 96%;
 		margin: 0;
+	}
+	.copyright {
+		margin: 20px 2%;
 	}
 }
 @media screen and (min-width:100px) and (max-width:1020px) {
@@ -744,6 +822,7 @@ h1.masterbanner, .subtitle, .toc, .abstract, .desc, .pubsnumber, .publishedDate,
   z-index: -1;
 }
 */
+
 .masterbanner {
 	padding-bottom: 0.67em;
 }
@@ -757,7 +836,7 @@ span.masterbanner {
 /* Revision page */
 
 .bookHead {
-	margin-bottom: 65px;
+	margin-bottom: 30px;
 	width: 100%;
 }
 .bookHead .masterbanner {
@@ -765,7 +844,7 @@ span.masterbanner {
 }
 .logo {
 	max-width:179px !important;
-	padding: 5px;
+	padding: 15px;
 }
 .bookHead tr {
 	background-color: #425563 !important;
@@ -801,7 +880,7 @@ ul.map, ul.bookmap {
 	padding-bottom: 0.67em;
 }
 .bookpage {
-	margin:0 !important;
+	margin:15px !important;
 }
 /* End front matter classes */
 
@@ -810,6 +889,12 @@ ul.map, ul.bookmap {
 
 header {
 	width: 1000px;
+}
+header[role="banner"] {
+	margin: 0 auto;
+}
+#bookpage header {
+	width: 100%;
 }
 .banner {
 	margin: 0 !important;
@@ -831,7 +916,7 @@ header td.next {
 }
 footer {
 	width: 1000px;
-	margin: 0 auto;
+	margin: 0 auto 40px auto;
 }
 table.footer {
 	margin-bottom: 20px;
@@ -857,6 +942,9 @@ header tr:hover, footer tr:hover {
 }
 footer[role="contentinfo"] {
 	display: block;
+	font-family: arial;
+	font-size: 10.66px;
+	font-weight: normal;
 }
 footer[role="contentinfo"] a {
 	color: black;
@@ -864,6 +952,7 @@ footer[role="contentinfo"] a {
 }
 .footer_home {
 	text-align:center;
+	margin: 10px;
 }
 
 /* End navigation arrows */
@@ -907,6 +996,14 @@ nav.wh_footer {
 nav.related-links a {
 	color: black;
 }
+nav.related-links::before {
+	content: "More information";
+	font-size: 18px;
+	font-weight: bold;
+}
+nav.related-links .ullinks {
+	margin-top: 12px !important;
+}
 .related_links_header {
 	margin-bottom: 4px;
 }
@@ -921,7 +1018,18 @@ nav.related-links a {
 }
 header table.nav {
     width: 100%;
+	margin: 13px;
 }
 span.navheader {
     float: right;
+}
+.topic_breadcrumb_link + .topic_breadcrumb_link::before {
+	content: " / ";
+}
+.navheader_parent_path {
+	color: black;
+}
+/* Search Styles */
+.highlight {
+    background-color: #FFFF88;
 }
