@@ -322,28 +322,28 @@ h1 {
   font-size: 24px;
   font-weight: 600;
   color: #333 !important;
-  margin: 30px 0px 20px 0px;
+  margin: 30px 0px 20px 0px !important;
   line-height: 30px; }
 h2 {
   font-size: 21px;
   font-weight: 600;
   color: #333 !important;
-  margin: 20px 0px 10px 0px; }
+  margin: 20px 0px 10px 0px !important; }
 h3 {
   font-size: 19px;
   color: #333 !important;
-  margin: 10px 0px; }
+  margin: 10px 0px !important; }
 h4 {
   font-size: 18px;
   color: #333 !important;
   font-weight: normal;
-  margin: 5px 0px;
+  margin: 5px 0px !important;
   line-height: 22px; }
 h5, h6 {
   font-size: 16px;
   color: #333 !important;
   font-weight: normal;
-  margin: 5px 0px; }
+  margin: 5px 0px !important; }
 
 p {
 	margin-top: 0px !important;
@@ -397,6 +397,10 @@ sup {
 table .fn sup {
 	top: 2px;
 	padding-left: 4px;
+}
+div.fn > p:first-of-type {
+	margin-left: 0;
+	display: inline;
 }
 strong {
 	font-weight: 600;
@@ -454,11 +458,14 @@ pre, code, samp, kbd {
 	background: #eff0f1 none repeat scroll 0 0 !important;
 	border-radius: 4px !important;
 }
-kbd.userinput {
+.userinput {
 	font-weight: inherit !important;
 }
 .uicontrol, .dt, .menucascade {
 	font-weight: 600;
+}
+dt {
+	margin-bottom: 12px;
 }
 .prereq_statement, .procedure_statement {
 	font-weight: 700;
@@ -544,7 +551,7 @@ main li {
 	font-size: inherit;
 	font-weight: inherit;
 	line-height: 22px !important;
-	margin: 0 0 12px 0 !important;
+	margin: 0 0 12px 0;
 	text-align: left !important;
 	padding-left: 5px;
 }
@@ -605,8 +612,15 @@ main li table {
 .itemgroup.info ul {
 	margin-top: 12px !important;
 }
-.li p:first-of-type {
-	margin-top: 12px !important;
+main table .ul {
+	margin-bottom: 0px !important;
+}
+main table .li {
+	margin: 0 !important;
+}
+
+table .p {
+	margin: 0px !important;
 }
 dl {
 	margin: 0 0 12px 0;
@@ -627,7 +641,7 @@ main ul.checklist li::before {
 	content: "";
 	display: block;
 	float: left;
-	margin: 5px;
+	margin: 5px 5px 5px -19px;
 	padding: 5px;
 }
 .ulchildlink br {
@@ -646,9 +660,14 @@ main ul.checklist li::before {
 /* Start tables */
 
 #tablecaption {
-	font-size: 1.2em;
+	font-size: 1.1em;
 	font-weight: 700;
 	padding: 1em 0 0 0;
+	text-align: left;
+}
+.tablecap {
+	font-size: 1.1em !important;
+	color:#333 !important;
 }
 .table tr:hover {
 	background-color: #eee;
@@ -1041,6 +1060,10 @@ nav.related-links {
 }
 nav ul.ullinks {
 	list-style: none !important;
+}
+nav .ulchildlink {
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
 }
 nav.wh_footer {
 	display: none;
