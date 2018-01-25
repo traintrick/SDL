@@ -243,7 +243,7 @@ main {
 	display: block;
 	margin: 0 auto;
 	width: 1000px;
-	padding: 1em 0;
+	padding: 1em 0 3em 0;
 }
 @media screen and (max-width:1020px) {
 	main, footer {
@@ -313,31 +313,31 @@ font-family: Arial, "AngsanaUPC", "Arial Unicode MS", sans-serif;
 
 body {
 	font-family: inherit;
-	font-size: 18px;
+	font-size: 16px;
 	color: #646569;
 }
 main {
-	font-family: "Open Sans", Arial, sans-serif;
-	font-size: 18px;
+	font-family: inherit;
+	font-size: 16px;
 	line-height: 1.125;
 	color: #646569 !important;
 	font-weight: 400;
 }
 main h1 {
     color: #646569;
-    font-size: 32px;
+    font-size: 24px;
     line-height: 42px;
     margin-bottom: 20px;
 }
 main h2 {
-    font-size: 30px;
+    font-size: 21px;
     color: #008375;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
     font-weight: 300;
 }
 main h3 {
     line-height: 1.0909090909;
-    font-size: 20px;
+    font-size: 19px;
     color: #008375;
     /*margin-bottom: 20px;
 	font-weight: 600;*/
@@ -352,7 +352,7 @@ h4 {
   margin: 5px 0px !important;
   line-height: 22px; }
 h5, h6 {
-  font-size: 18px;
+  font-size: 16px;
   color: #008375 !important;
   font-weight: normal;
   margin: 5px 0px !important; }
@@ -512,7 +512,6 @@ main a[target="_blank"]:link, main a.xref:link, main a.link:link, a.fn:link {
 	color: #ff8300 !important;
 	font-size: 1em;
 	line-height: 22px;
-	
 	font-weight: 700;
 	transition: color 0.15s linear 0s;	
 }
@@ -663,12 +662,13 @@ main ul.checklist {
 	margin: 0 0 0 14px !important;
 }
 main ul.checklist li::before {
-	border: 1px solid #666;
+	border: 1px solid #646569;
 	content: "";
 	display: block;
 	float: left;
-	margin: 5px 5px 5px -19px;
-	padding: 5px;
+	margin: 5px 5px 5px -20px;
+	padding: 6px;
+	border-radius: 2px;
 }
 .ulchildlink br {
 	display:none;
@@ -679,7 +679,9 @@ main ul.checklist li::before {
 .fn_table sup {
 	top:5px;
 }
-
+sub, sup {
+	font-size: 71%;
+}
 /* End lists and footnotes */
 
 
@@ -716,7 +718,6 @@ main table {
 main th, main td {
     font-weight: normal;
     text-align: left;
-    padding: 11px;
 }
 main th {
     font-size: 16px;
@@ -784,6 +785,7 @@ td.entry {
 
 
 /* Start alerts and notes */
+/*
 .cautiontitle,
 div[class = "caution"] > h3{
     background-image: url("./oxygen-webhelp/resources/img/caution.png") !important;
@@ -845,6 +847,7 @@ div[class = "caution"] > h3{
 	margin-left: 20px;
 	margin-top: 5px;
 }
+*/
 .note {
 	width: 600px;
 	margin: 30px 10px 42px 10px;
@@ -910,6 +913,7 @@ span.figcap {
 	font-weight: 700;
 	padding: 1em 0 0 0;
 	display: block;
+	margin-bottom: 7px;
 }
 .icon {
 	height: auto;
@@ -1095,7 +1099,7 @@ header tr:hover, footer tr:hover {
 }
 footer[role="contentinfo"] {
 	display: block;
-	font-family: arial;
+	font-family: inherit;
 	font-size: 10.66px;
 	font-weight: normal;
 }
@@ -1153,12 +1157,7 @@ nav.wh_footer {
 nav.related-links a {
 	color: #646569 !important;
 }
-nav.related-links::before {
-	content: "Next topics";
-	font-size: 18px;
-	font-weight: bold;
-	color: #646569 !important;
-}
+
 nav.related-links .ullinks {
 	margin-top: 12px !important;
 }
