@@ -1013,7 +1013,7 @@ header tr:hover, footer tr:hover {
 }
 footer[role="contentinfo"] {
 	display: block;
-	font-family: arial;
+	font-family: "Metric";
 	font-size: 10.66px;
 	font-weight: normal;
 }
@@ -1068,11 +1068,12 @@ nav .ulchildlink {
 nav.wh_footer {
 	display: none;
 }
+
 nav.related-links a {
 	color: #333 !important;
 }
 nav.related-links::before {
-	content: "Next topics";
+	content: "";
 	font-size: 18px;
 	font-weight: bold;
 	color: #333 !important;
